@@ -11,7 +11,7 @@
 class Solution {
 public:
     ListNode* reverseKGroup(ListNode* head, int k) {
-        if (head == nullptr || head->next == nullptr || k <= 1) {
+        if (head == nullptr && k<=1 && head->next==nullptr) {
             return head;
         }
 
@@ -33,6 +33,7 @@ public:
         ListNode* curr = head;
         ListNode* next = nullptr;
         int nodesToReverse = k;
+        
 
         while (curr != nullptr && nodesToReverse > 0) {
             next = curr->next;
@@ -49,7 +50,7 @@ public:
             head->next = reverseKGroup(next, k);
         }
 
-        // Return the new head after reversal as prev become at last but due to reverse it           come on to first place so we return the prev
+        // Return the new head after reversal as prev become at last but due to reverse it              come on to first place so we return the prev
         return prev;
     }
 };
