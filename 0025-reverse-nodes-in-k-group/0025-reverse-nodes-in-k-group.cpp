@@ -49,7 +49,7 @@ public:
             head->next = reverseKGroup(next, k);
         }
 
-        // Return the new head after reversal as prev become at last but due to reverse it come on to first place so we return the prev
+        // Return the new head after reversal as prev become at last but due to reverse it           come on to first place so we return the prev
         return prev;
     }
 };
