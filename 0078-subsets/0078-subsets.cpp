@@ -7,7 +7,7 @@ public:
         for(int i=0; i<subsets; i++){
             vector<int> list;
             for(int j=0; j<n; j++){
-                if(i&(1<<j)) // check jth bit are set are not
+                if(i & (1<<j)) // check jth bit are set are not
                 {
                     list.push_back(nums[j]);
                 }
