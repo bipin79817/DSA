@@ -24,8 +24,11 @@ public:
             }
             if(nums[left]>nums[left+1] && nums[left]>nums[left-1]){
                 return left;
+            }else if(nums[right]>nums[right+1] && nums[right]>nums[right-1]){
+                return right;
             }else{
                 left=left+1;
+                right=right-1;
             }
         }
         return 1;
