@@ -11,7 +11,7 @@ public:
         
         for(int i=2; i*i<n; i++){
             if(isprime[i]){
-                for(int j=2*i; j<n; j=j+i){
+                for(int j=i*i; j<n; j=j+i){
                     isprime[j]=false;
                 }
             }
